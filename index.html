@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button type="button" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    
+    <div class="dashboard">
+        <!-- Greeting Widget (Top) -->
+        <section class="greeting-widget">
+            <h2 class="greeting-text">Good Morning</h2>
+            <div class="time-display">14:30:25</div>
+            <div class="date-display">Monday, January 1, 2024</div>
+            <input type="text" class="name-input" placeholder="Enter your name">
+        </section>
+
+        <!-- Middle Container with Pomodoro and Tasks -->
+        <div class="middle-container">
+            <!-- Pomodoro Timer -->
+            <section class="pomodoro-section">
+                <h2>Focus Timer</h2>
+                <div class="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <button type="button" class="btn btn-start" data-action="start">Start</button>
+                    <button type="button" class="btn btn-stop" data-action="stop">Stop</button>
+                    <button type="button" class="btn btn-reset" data-action="reset">Reset</button>
+                </div>
+            </section>
+
+            <!-- Tasks List -->
+            <section class="tasks-section">
+                <h2>Tasks</h2>
+                <form class="task-form">
+                    <input type="text" class="task-input" placeholder="Add a new task...">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form>
+                <ul class="task-list-container"></ul>
+                <div class="empty-state" data-empty-message="No tasks yet. Add one above!"></div>
+            </section>
+        </div>
+
+        <!-- Quick Links (Bottom) -->
+        <section class="quick-links-section">
+            <h2>Quick Links</h2>
+            <form class="link-form">
+                <input type="text" class="link-name" placeholder="Link name">
+                <input type="text" class="link-url" placeholder="https://example.com">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+            <div class="links-container"></div>
+            <div class="empty-state" data-empty-message="No quick links yet. Add some above!"></div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
